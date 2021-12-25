@@ -1,0 +1,10 @@
+.container {
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.element {
+    color: #A9A9A9;
+}
+

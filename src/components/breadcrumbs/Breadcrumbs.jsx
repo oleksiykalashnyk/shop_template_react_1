@@ -23,7 +23,7 @@ const Breadcrumbs = ({data = breadcrumbsData}) => {
                         <Link className={styles.element} to={element.link}>{element.name}</Link>
                         <p className={styles.element}> &nbsp; / &nbsp;</p>
                     </>
-                ) : <Link className={styles.element} to={element.link}>{element.name}</Link>
+                ) : <Link className={styles.elementLast} to={element.link}>{element.name}</Link>
 
             ))}
 

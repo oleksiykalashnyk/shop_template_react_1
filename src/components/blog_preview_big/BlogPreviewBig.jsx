@@ -1,11 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './BlogPreviewBig.module.css';
 
 const BlogPreviewBig = ({title, image, tags, author, data}) => {
+
+    let navigate = useNavigate();
+
     return (
-        <div className={styles.card}>
-            <img src={image} className={styles.image} salt=""/>
+        <div className={styles.card}  onClick={() => navigate(`/post/3`)}>
+            <img src={image} className={styles.image} alt={title}/>
             <div className={styles.wrapper}>
                 <div className={styles.top}>
                     {tags.map(tag => <div className={styles.tag}>{tag}</div>)}

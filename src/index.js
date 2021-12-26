@@ -6,8 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 import App from "./App";
+
+const REACT_APP_BASE_NAME = process.env.REACT_APP_BASE_NAME || '/';
+
 ReactDOM.render(
-  <BrowserRouter basename="/shop">
+  <BrowserRouter basename={REACT_APP_BASE_NAME}>
     <App />
   </BrowserRouter>,
   document.getElementById('root')

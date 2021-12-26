@@ -2,6 +2,7 @@
     flex: 1;
     position: relative;
     color: white;
+    cursor: pointer;
 }
 .image {
     width: 100%;

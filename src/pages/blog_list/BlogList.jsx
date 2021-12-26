@@ -2,9 +2,12 @@ import React from 'react';
 
 import styles from './BlogList.module.css';
 import { BiGridAlt, BiListUl } from "react-icons/bi";
+import {InputGroup, FormControl, Button} from 'react-bootstrap';
 
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import BlogPreviewBig from "../../components/blog_preview_big/BlogPreviewBig";
+import BlogPreviewSmall from "../../components/blog_preview_small/BlogPreviewSmall";
+
 
 const blogListData = {
     bigPosts: [
@@ -14,7 +17,7 @@ const blogListData = {
             tags: ['super', 'tag_65'],
             image: "/assets/blog/2.png",
             author: {
-                name: "Ksenia",
+                name: "Author",
                 avatar: "/assets/avatar/avatar1.png"
             }
         },
@@ -29,14 +32,108 @@ const blogListData = {
             }
         }
     ],
-    smallPosts: []
+    smallPosts: [
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['super', 'tag'],
+            image: "/assets/blog/3.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['super', 'tag'],
+            image: "/assets/blog/4.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['super', 'tag_65'],
+            image: "/assets/blog/5.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['super', 'tag_65'],
+            image: "/assets/blog/6.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['tag', 'tag', 'tag'],
+            image: "/assets/blog/7.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['tag', 'tag'],
+            image: "/assets/blog/8.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['super', 'tag'],
+            image: "/assets/blog/9.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        },
+        {
+            title: "Space for your heding is here, write what you need",
+            data: "21. 6. 1993",
+            tags: ['tag'],
+            image: "/assets/blog/10.png",
+            author: {
+                name: "Author",
+                avatar: "/assets/avatar/avatar1.png"
+            }
+        }
+    ]
 }
+
+
+
+const breadcrumbsData = [
+    {
+        name: "Home",
+        link: "/"
+    },
+    {
+        name: "Blog list",
+        link: "/blog"
+    },
+];
 
 
 const BlogList = () => {
     return (
-        <div>
-            <Breadcrumbs/>
+        <>
+            <Breadcrumbs data={breadcrumbsData}/>
 
             <div className={styles.blogListNavigation}>
                 <h1>Fruit and vegetables</h1>
@@ -59,7 +156,48 @@ const BlogList = () => {
             <div className={styles.wrapper}>
                 {blogListData.bigPosts.map(post => <BlogPreviewBig {...post}/>)}
             </div>
-        </div>
+
+            <div className={styles.mainWrapper}>
+                <div className={styles.left}>
+                    <div className={styles.list}>
+                        <h5>Archives</h5>
+                        <p>March 2020</p>
+                        <p>February 2020</p>
+                        <p>January 2020</p>
+                        <p>November 2019</p>
+                        <p>December 2019</p>
+                    </div>
+
+                    <div className={styles.list}>
+                        <h5>Category</h5>
+                        <p className={styles.mutted}>Food</p>
+                        <p className={styles.mutted}>Chefs specialities</p>
+                        <p className={styles.mutted}>Vegetable</p>
+                        <p className={styles.mutted}>Meat</p>
+                        <p className={styles.mutted}>Recommendations</p>
+                    </div>
+
+                    <div className={styles.list}>
+                        <h5>Join our list</h5>
+                        <p className={styles.mutted}>Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.</p>
+                        <InputGroup className="my-3" >
+                            <FormControl
+                                placeholder="Your email address"
+                                aria-label="Your email address"
+                            />
+                            <Button variant="outline-dark" className=" border-0 fw-bold" >
+                                Subscribe
+                            </Button>
+                        </InputGroup>
+                    </div>
+                </div>
+
+                <div className={styles.right}>
+                    {blogListData.smallPosts.map(post => <BlogPreviewSmall {...post}/>)}
+                </div>
+            </div>
+
+        </>
     );
 };
 

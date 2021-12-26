@@ -1,0 +1,73 @@
+.card {
+    flex-basis: 29%;
+    margin: 0 2% 20px;
+    height: fit-content;
+}
+
+.image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 500ms ease-in;
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+}
+
+.card:hover img {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.top {
+    display: flex;
+    padding: 10px 0;
+}
+
+.tag {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 2px 5px;
+    color: #6A983C;
+    background: #F4F8EC;
+    margin-right: 5px;
+    border-radius: 12px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bottomMeta {
+    margin: 10px 0 0;
+    display: flex;
+}
+
+.bottomMeta > p {
+    padding: 0 8px 0 0;
+}
+
+@media (min-width: 421px) and (max-width: 910px) {
+    .card {
+        flex-basis: 40%;
+    }
+
+    .image {
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .card {
+        flex-basis: 100%;
+    }
+
+    .image {
+        height: 300px;
+    }
+
+}

@@ -7,7 +7,7 @@ import {InputGroup, FormControl, Button} from 'react-bootstrap';
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import BlogPreviewBig from "../../components/blog_preview_big/BlogPreviewBig";
 import BlogPreviewSmall from "../../components/blog_preview_small/BlogPreviewSmall";
-
+import Pagination from  "../../components/pagination/Pagination";
 
 const blogListData = {
     bigPosts: [
@@ -197,6 +197,7 @@ const BlogList = () => {
                 </div>
             </div>
 
+            <Pagination/>
         </>
     );
 };

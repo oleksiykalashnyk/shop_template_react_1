@@ -7,7 +7,7 @@ import './index.css';
 
 import App from "./App";
 
-const REACT_APP_BASE_NAME = process.env.REACT_APP_BASE_NAME || '/';
+const REACT_APP_BASE_NAME = process.env.REACT_APP_BASE_NAME || '/shop';
 
 ReactDOM.render(
   <BrowserRouter basename={REACT_APP_BASE_NAME}>

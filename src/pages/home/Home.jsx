@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Home.module.css';
 
 import BlogNav from "../../components/blog_nav/BlogNav";
-import HomeBanner from "../../components/home_banner/HomeBanner";
+import HomeBanner from "../../components/home_banner/homeBanner";
 import ProductCard from "../../components/product_card/ProductCard";
 
 

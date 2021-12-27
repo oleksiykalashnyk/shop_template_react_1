@@ -2,7 +2,7 @@ import React from 'react';
 
 import {useNavigate} from "react-router-dom";
 
-import styles from './HomeBanner.module.css';
+import styles from './homeBanner.module.css';
 import {FiChevronRight} from "react-icons/fi";
 
 const homeBannerData = {

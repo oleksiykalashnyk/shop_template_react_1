@@ -8,13 +8,27 @@ import HomeBanner from "../../components/home_banner/homeBanner";
 const Home = () => {
 
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.left}>
-                <BlogNav buttonMoreCategories={true}/>
+        <div className={styles.container}>
+
+            <div className={styles.wrapper}>
+                <div className={styles.left}>
+                    <BlogNav buttonMoreCategories={true}/>
+                </div>
+                <div className={styles.right}>
+                    <HomeBanner/>
+                    <HomeBanner/>
+                </div>
             </div>
-            <div className={styles.right}>
-                <HomeBanner/>
-                <HomeBanner/>
+
+
+            <div className={styles.wrapper}>
+                <div className={styles.left}>
+                    <BlogNav buttonMoreCategories={true}/>
+                </div>
+                <div className={styles.right}>
+                    <HomeBanner/>
+                    <HomeBanner/>
+                </div>
             </div>
         </div>
     );

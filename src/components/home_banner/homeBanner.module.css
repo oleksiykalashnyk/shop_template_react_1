@@ -1,11 +1,13 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    background: #F4F8EC;
+    background-color: rgba(106, 152, 60, 0.57);
+    background-image: radial-gradient(circle, rgba(228, 255, 176, 0.35) 18% , rgba(106, 152, 60, 0.17) 66%);
     height: 280px;
     padding: 40px;
     justify-content: space-between;
     flex-basis: 50%;
+    border-radius: 12px;
     margin: 0 20px;
 }
 
@@ -58,4 +60,12 @@
 
 .button > p > svg {
     color: #46760A;
+}
+
+
+@media screen and (max-width: 910px) {
+ .wrapper{
+     margin: 20px 0;
+     flex-basis: 100%;
+ }
 }

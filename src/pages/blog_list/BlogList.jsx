@@ -8,6 +8,7 @@ import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import BlogPreviewBig from "../../components/blog_preview_big/BlogPreviewBig";
 import BlogPreviewSmall from "../../components/blog_preview_small/BlogPreviewSmall";
 import Pagination from  "../../components/pagination/Pagination";
+import BlogNav from "../../components/blog_nav/BlogNav";
 
 const blogListData = {
     bigPosts: [
@@ -129,7 +130,56 @@ const breadcrumbsData = [
     },
 ];
 
-
+const blogNavArchivesData = {
+    title: "Archives",
+    list: [
+        {
+            name: "March 2020",
+            link: "#"
+        },
+        {
+            name: "February 2020",
+            link: "#"
+        },
+        {
+            name: "January 2020",
+            link: "#"
+        },
+        {
+            name: "November 2019",
+            link: "#"
+        },
+        {
+            name: "December 2019",
+            link: "#"
+        },
+    ]
+}
+const blogNavCategoryData = {
+    title: "Category",
+    list: [
+        {
+            name: "Food",
+            link: "#"
+        },
+        {
+            name: "Chefs specialities",
+            link: "#"
+        },
+        {
+            name: "Vegetable",
+            link: "#"
+        },
+        {
+            name: "Meat",
+            link: "#"
+        },
+        {
+            name: "Recommendations",
+            link: "#"
+        },
+    ]
+}
 const BlogList = () => {
     return (
         <>
@@ -159,23 +209,10 @@ const BlogList = () => {
 
             <div className={styles.mainWrapper}>
                 <div className={styles.left}>
-                    <div className={styles.list}>
-                        <h5>Archives</h5>
-                        <p>March 2020</p>
-                        <p>February 2020</p>
-                        <p>January 2020</p>
-                        <p>November 2019</p>
-                        <p>December 2019</p>
-                    </div>
+                    <BlogNav {...blogNavArchivesData}/>
 
-                    <div className={styles.list}>
-                        <h5>Category</h5>
-                        <p className={styles.mutted}>Food</p>
-                        <p className={styles.mutted}>Chefs specialities</p>
-                        <p className={styles.mutted}>Vegetable</p>
-                        <p className={styles.mutted}>Meat</p>
-                        <p className={styles.mutted}>Recommendations</p>
-                    </div>
+                    <BlogNav {...{...blogNavCategoryData, mutted: true}}/>
+
 
                     <div className={styles.list}>
                         <h5>Join our list</h5>

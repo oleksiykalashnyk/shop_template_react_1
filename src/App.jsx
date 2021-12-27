@@ -4,12 +4,12 @@ import {Route, Routes} from "react-router-dom";
 import LayoutFirst from "./layouts/LayoutFirst";
 
 import Loader from './components/loader/Loader'
-import BlogList from "./pages/blog_list/BlogList";
-import Post from './pages/post/Post';
 import ScrollToTop from "./components/scroll_to_top/ScrollToTop";
 
 const Home = lazy(() => import('./pages/home/Home'));
 const Product = lazy(() => import('./pages/product/Product'));
+const BlogList = lazy(() => import('./pages/blog_list/BlogList'));
+const Post = lazy(() => import('./pages/post/Post'));
 
 
 const App = () => {
@@ -23,6 +23,7 @@ const App = () => {
                         <Route path='/post/:id' element={<Post/>}/>
 
                         <Route path='/product/:id' element={<Product/>}/>
+
                         <Route
                             path="*"
                             element={
